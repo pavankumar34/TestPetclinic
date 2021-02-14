@@ -12,5 +12,13 @@ stages
             git 'https://github.com/SriDevops-T/TestPetclinic.git'
              }
              }
+   stage("check")
+   {
+      
+       steps
+      {
+          echo "welcome"
+      }
              }
+}
 }
