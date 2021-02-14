@@ -2,6 +2,10 @@ pipeline
 {
 
 agent any
+   tools
+    {
+        maven 'M2_HOME'
+    }
 stages
 {
    stage("checkoutcode")
@@ -10,8 +14,10 @@ stages
          {
              echo "welcome to multi-branchpipeine"
             git 'https://github.com/SriDevops-T/TestPetclinic.git'
+            echo "webhooks are done"
              }
              }
+
    stage("check")
    {
       
@@ -22,3 +28,14 @@ stages
              }
 }
 }
+
+   stage("compile the code")
+   {
+       steps
+      {
+           sh 'mvn compile'
+      }
+             }
+}
+
+
