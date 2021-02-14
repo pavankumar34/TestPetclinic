@@ -17,6 +17,18 @@ stages
             echo "webhooks are done"
              }
              }
+
+   stage("check")
+   {
+      
+       steps
+      {
+          echo "welcome"
+      }
+             }
+}
+}
+
    stage("compile the code")
    {
        steps
@@ -25,4 +37,5 @@ stages
       }
              }
 }
+
 
