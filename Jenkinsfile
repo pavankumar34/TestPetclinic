@@ -9,6 +9,7 @@ stages
          steps
          {
              echo "welcome to multi-branchpipeine"
+            git 'https://github.com/SriDevops-T/TestPetclinic.git'
              }
              }
              }
