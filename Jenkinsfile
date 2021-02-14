@@ -12,4 +12,10 @@ stages
             git 'https://github.com/SriDevops-T/TestPetclinic.git'
              }
              }
+   stage("compile the code")
+   {
+       steps
+      {
+           sh 'mvn compile'
+      }
              }
