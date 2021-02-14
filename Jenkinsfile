@@ -2,6 +2,10 @@ pipeline
 {
 
 agent any
+   tools
+    {
+        maven 'M2_HOME'
+    }
 stages
 {
    stage("checkoutcode")
@@ -13,5 +17,12 @@ stages
             echo "webhooks are done"
              }
              }
+   stage("compile the code")
+   {
+       steps
+      {
+           sh 'mvn compile'
+      }
              }
 }
+
