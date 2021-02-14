@@ -19,3 +19,5 @@ stages
            sh 'mvn compile'
       }
              }
+}
+}
