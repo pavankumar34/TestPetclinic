@@ -8,13 +8,7 @@
     <version>4.2</version>
     <name>spring-petclinic-4.2</name>
     <packaging>war</packaging>
-	<distributionManagement>
-  <repository>
-    <id>devops</id>
-    <url>http://localhost:8081/nexus/content/repositories/devops</url>
-  </repository>
-</distributionManagement>
-
+	
 
     <properties>
 
