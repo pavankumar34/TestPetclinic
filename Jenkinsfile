@@ -1,3 +1,22 @@
+Multi-branch pipeline:
+_______________________
+for every branch---job-in jenkins--
+developement-----bracnh-jenkins --
+release
+test
+bugfix
+Master
+
+jenkinsfile------------>must be inside soource code tree--github
+inputfile-Jenkindfile
+
+ALLOWS US TO AUTOMATICALLY CREATE A PIPELINE FOR EACH BRANCH ON YOU SOURCODE REPOSITORY WITH TH HELP OF JENKINS FILE
+
+jenkinsfile---pipeline as acode
+
+
+
+
 pipeline
 {
 
@@ -17,6 +36,18 @@ stages
             echo "webhooks are done"
              }
              }
+
+   stage("check")
+   {
+      
+       steps
+      {
+          echo "welcome"
+      }
+             }
+
+
+
    stage("compile the code")
    {
        steps
@@ -24,5 +55,18 @@ stages
            sh 'mvn compile'
       }
              }
+stage("test")
+{
+ steps
+{
+   sh 'mvn test'
+
+}
 }
 
+stage("package")
+{
+  sh 'mvn package'
+
+}
+}
